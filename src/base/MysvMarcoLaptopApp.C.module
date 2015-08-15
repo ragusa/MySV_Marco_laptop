@@ -1,0 +1,51 @@
+#include "MysvMarcoLaptopApp.h"
+#include "Moose.h"
+#include "AppFactory.h"
+
+template<>
+InputParameters validParams<MysvMarcoLaptopApp>()
+{
+  InputParameters params = validParams<MooseApp>();
+
+  params.set<bool>("use_legacy_uo_initialization") = false;
+  params.set<bool>("use_legacy_uo_aux_computation") = false;
+  return params;
+}
+
+MysvMarcoLaptopApp::MysvMarcoLaptopApp(const std::string & name, InputParameters parameters) :
+    MooseApp(name, parameters)
+{
+  srand(processor_id());
+
+  Moose::registerObjects(_factory);
+  MysvMarcoLaptopApp::registerObjects(_factory);
+
+  Moose::associateSyntax(_syntax, _action_factory);
+  MysvMarcoLaptopApp::associateSyntax(_syntax, _action_factory);
+}
+
+MysvMarcoLaptopApp::~MysvMarcoLaptopApp()
+{
+}
+
+// External entry point for dynamic application loading
+extern "C" void MysvMarcoLaptopApp__registerApps() { MysvMarcoLaptopApp::registerApps(); }
+void
+MysvMarcoLaptopApp::registerApps()
+{
+  registerApp(MysvMarcoLaptopApp);
+}
+
+// External entry point for dynamic object registration
+extern "C" void MysvMarcoLaptopApp__registerObjects(Factory & factory) { MysvMarcoLaptopApp::registerObjects(factory); }
+void
+MysvMarcoLaptopApp::registerObjects(Factory & factory)
+{
+}
+
+// External entry point for dynamic syntax association
+extern "C" void MysvMarcoLaptopApp__associateSyntax(Syntax & syntax, ActionFactory & action_factory) { MysvMarcoLaptopApp::associateSyntax(syntax, action_factory); }
+void
+MysvMarcoLaptopApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
+{
+}
