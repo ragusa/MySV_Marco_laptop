@@ -26,7 +26,7 @@ InputParameters validParams<EnergySw>()
   params.addRequiredCoupledVar("hu", "x component of h*vec{u}");
   params.addCoupledVar("hv", "y component of h*vec{u}");
   // Gravity
-  params.addParam<Real>("gravity", 9.81, "value of the gravity");
+  params.addParam<Real>("gravity", 1.0, "value of the gravity");
 
   return params;
 }

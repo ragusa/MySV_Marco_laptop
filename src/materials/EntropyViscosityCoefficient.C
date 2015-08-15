@@ -8,7 +8,7 @@ InputParameters validParams<EntropyViscosityCoefficient>()
   // Parameters
   params.addParam<bool>("is_first_order", false, "if true, use the first-order viscosity coefficient");
   params.addParam<Real>("Ce", 1., "coefficient for high-order viscosity coefficient");
-  params.addParam<Real>("gravity", 9.81, "gravity");
+  params.addParam<Real>("gravity", 1.0, "gravity");
   // Coupled variables
   params.addRequiredCoupledVar("h", "high/density");
   params.addRequiredCoupledVar("hu", "x component of h*\vec{u}");

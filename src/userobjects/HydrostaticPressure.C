@@ -4,7 +4,7 @@ template<>
 InputParameters validParams<HydrostaticPressure>()
 {
   InputParameters params = validParams<EquationOfState>();
-  params.addParam<Real>("gravity", 9.81, "value of the gravity");
+  params.addParam<Real>("gravity", 1.0, "value of the gravity");
 
   return params;
 }
