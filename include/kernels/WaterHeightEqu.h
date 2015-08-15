@@ -13,7 +13,7 @@ class WaterHeightEqu : public Kernel
 {
 public:
 
-  WaterHeightEqu(const std::string & name, InputParameters parameters);
+  WaterHeightEqu(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();

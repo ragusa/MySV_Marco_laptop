@@ -31,8 +31,8 @@ InputParameters validParams<PressureSw>()
   return params;
 }
 
-PressureSw::PressureSw(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+PressureSw::PressureSw(const InputParameters & parameters) :
+    AuxKernel(parameters),
     // Coupled variables
     _h(coupledValue("h")),
     _hu(coupledValue("hu")),

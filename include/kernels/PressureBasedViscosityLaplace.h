@@ -27,8 +27,7 @@ class PressureBasedViscosityLaplace : public Kernel
 {
 public:
 
-  PressureBasedViscosityLaplace(const std::string & name,
-             InputParameters parameters);
+  PressureBasedViscosityLaplace(const InputParameters & parameters);
 
 protected:
 

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# dir-1 dir-2 file-ext
+echo $1 $2 $3
+
+find ./$1 -type f -iname "*.$3" -print0 | while IFS= read -r -d $'\0' line; do
+    #echo "$line"
+    # ls -l "$line"
+    # get the filename
+    f=`basename $line`
+    echo ""
+    echo "---------------------------------"
+    echo "---------------------------------"
+    echo "Dealing with file : $f"
+    echo "---------------------------------"
+    # get the last part of the dirname
+    dir=`dirname $line`
+    dir="$(basename $dir)"
+    #echo $dir
+    # do the diff
+    diff ./$1/$dir/$f ./$2/$dir/$f
+done

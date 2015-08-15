@@ -26,7 +26,7 @@ class EnergyFluxSw : public AuxKernel
 {
 public:
 
-  EnergyFluxSw(const std::string & name, InputParameters parameters);
+  EnergyFluxSw(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

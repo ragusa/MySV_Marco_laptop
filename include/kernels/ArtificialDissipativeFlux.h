@@ -27,8 +27,7 @@ class ArtificialDissipativeFlux : public Kernel
 {
 public:
 
-  ArtificialDissipativeFlux(const std::string & name,
-             InputParameters parameters);
+  ArtificialDissipativeFlux(const InputParameters & parameters);
 
 protected:
 

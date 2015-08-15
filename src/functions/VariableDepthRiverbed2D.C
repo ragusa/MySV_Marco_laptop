@@ -28,8 +28,8 @@ InputParameters validParams<VariableDepthRiverbed2D>()
   return params;
 }
 
-VariableDepthRiverbed2D::VariableDepthRiverbed2D(const std::string & name, InputParameters parameters) :
-    Function(name, parameters),
+VariableDepthRiverbed2D::VariableDepthRiverbed2D(const InputParameters & parameters) :
+    Function(parameters),
     // parameters
     _xmin(getParam<Real>("xmin")),
     _xmax(getParam<Real>("xmax")),

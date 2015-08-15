@@ -9,8 +9,8 @@ InputParameters validParams<HydrostaticPressure>()
   return params;
 }
 
-HydrostaticPressure::HydrostaticPressure(const std::string & name, InputParameters parameters) :
-    EquationOfState(name, parameters),
+HydrostaticPressure::HydrostaticPressure(const InputParameters & parameters) :
+    EquationOfState(parameters),
     _g(getParam<Real>("gravity"))
 {}
 

@@ -28,8 +28,8 @@ InputParameters validParams<Xvelocity>()
   return params;
 }
 
-Xvelocity::Xvelocity(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+Xvelocity::Xvelocity(const InputParameters & parameters) :
+    AuxKernel(parameters),
     // Coupled variables
     _h(coupledValue("h")),
     _hu(coupledValue("hu"))

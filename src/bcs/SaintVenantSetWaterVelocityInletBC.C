@@ -23,8 +23,8 @@ InputParameters validParams<SaintVenantSetWaterVelocityInletBC>()
 }
 
 
-SaintVenantSetWaterVelocityInletBC::SaintVenantSetWaterVelocityInletBC(const std::string & name, InputParameters parameters) :
-    IntegratedBC(name, parameters),
+SaintVenantSetWaterVelocityInletBC::SaintVenantSetWaterVelocityInletBC(const InputParameters & parameters) :
+    IntegratedBC(parameters),
     // Equation name
     _equ_type("continuity x_mom invalid", getParam<std::string>("equ_name")),
     // Coupled variables

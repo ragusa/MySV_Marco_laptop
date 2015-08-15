@@ -25,7 +25,7 @@ InputParameters validParams<VariableDepthRiverbed2D>();
 class VariableDepthRiverbed2D : public Function
 {
 public:
-  VariableDepthRiverbed2D(const std::string & name, InputParameters parameters);
+  VariableDepthRiverbed2D(const InputParameters & parameters);
 
   virtual Real value(Real t, const Point & p);
 

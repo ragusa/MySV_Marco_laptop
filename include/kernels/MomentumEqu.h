@@ -14,7 +14,7 @@ class MomentumEqu : public Kernel
 {
 public:
 
-  MomentumEqu(const std::string & name, InputParameters parameters);
+  MomentumEqu(const InputParameters & parameters);
 
 protected:
   virtual Real computeQpResidual();

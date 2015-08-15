@@ -15,7 +15,7 @@ InputParameters validParams<LapidusViscosityCoefficient>();
 class LapidusViscosityCoefficient : public Material
 {
 public:
-  LapidusViscosityCoefficient(const std::string & name, InputParameters parameters);
+  LapidusViscosityCoefficient(const InputParameters & parameters);
   virtual ~LapidusViscosityCoefficient();
 
 protected:

@@ -21,8 +21,8 @@ InputParameters validParams<SolidWallBC>()
 }
 
 
-SolidWallBC::SolidWallBC(const std::string & name, InputParameters parameters) :
-    IntegratedBC(name, parameters),
+SolidWallBC::SolidWallBC(const InputParameters & parameters) :
+    IntegratedBC(parameters),
     // Equation name
     _equ_type("continuity x_mom y_mom invalid", getParam<std::string>("equ_name")),
     // Coupled variables

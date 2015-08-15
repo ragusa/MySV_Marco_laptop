@@ -21,9 +21,8 @@ InputParameters validParams<PressureBasedViscosityMassMatrix>()
   return params;
 }
 
-PressureBasedViscosityMassMatrix::PressureBasedViscosityMassMatrix(const std::string & name,
-                                             InputParameters parameters) :
-    TimeDerivative(name,parameters)
+PressureBasedViscosityMassMatrix::PressureBasedViscosityMassMatrix(const InputParameters & parameters) :
+    TimeDerivative(parameters)
 {}
 
 Real

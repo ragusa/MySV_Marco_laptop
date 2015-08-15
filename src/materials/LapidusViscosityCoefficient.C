@@ -18,8 +18,8 @@ InputParameters validParams<LapidusViscosityCoefficient>()
   return params;
 }
 
-LapidusViscosityCoefficient::LapidusViscosityCoefficient(const std::string & name, InputParameters parameters) :
-    Material(name, parameters),
+LapidusViscosityCoefficient::LapidusViscosityCoefficient(const InputParameters & parameters) :
+    Material(parameters),
     // Coupled variables
     _h(coupledValue("h")),
     _hu(coupledValue("hu")),

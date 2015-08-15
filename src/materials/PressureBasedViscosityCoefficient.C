@@ -23,8 +23,8 @@ InputParameters validParams<PressureBasedViscosityCoefficient>()
   return params;
 }
 
-PressureBasedViscosityCoefficient::PressureBasedViscosityCoefficient(const std::string & name, InputParameters parameters) :
-    Material(name, parameters),
+PressureBasedViscosityCoefficient::PressureBasedViscosityCoefficient(const InputParameters & parameters) :
+    Material(parameters),
     // Pressure-based viscosity type
     _pbv_type("JST HMP ST INVALID", getParam<std::string>("pressure_based_visc_type")),
     // Coupled variable

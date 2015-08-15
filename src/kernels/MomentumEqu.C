@@ -22,8 +22,8 @@ InputParameters validParams<MomentumEqu>()
   return params;
 }
 
-MomentumEqu::MomentumEqu(const std::string & name, InputParameters parameters)
-  :Kernel(name, parameters),
+MomentumEqu::MomentumEqu(const InputParameters & parameters)
+  :Kernel(parameters),
     // Coupled variables
     _h(coupledValue("h")),
     _hu(coupledValue("hu")),

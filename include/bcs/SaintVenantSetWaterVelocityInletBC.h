@@ -14,7 +14,7 @@ InputParameters validParams<SaintVenantSetWaterVelocityInletBC>();
 class SaintVenantSetWaterVelocityInletBC : public IntegratedBC
 {
 public:
-  SaintVenantSetWaterVelocityInletBC(const std::string & name, InputParameters parameters);
+  SaintVenantSetWaterVelocityInletBC(const InputParameters & parameters);
   virtual ~SaintVenantSetWaterVelocityInletBC(){}
 
 protected:

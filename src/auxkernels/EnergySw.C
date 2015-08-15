@@ -31,8 +31,8 @@ InputParameters validParams<EnergySw>()
   return params;
 }
 
-EnergySw::EnergySw(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+EnergySw::EnergySw(const InputParameters & parameters) :
+    AuxKernel(parameters),
     // Coupled variables
     _h(coupledValue("h")),
     _hu(coupledValue("hu")),

@@ -26,7 +26,7 @@ class Xvelocity : public AuxKernel
 {
 public:
 
-  Xvelocity(const std::string & name, InputParameters parameters);
+  Xvelocity(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

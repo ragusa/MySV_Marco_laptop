@@ -15,7 +15,7 @@ InputParameters validParams<PressureBasedViscosityCoefficient>();
 class PressureBasedViscosityCoefficient : public Material
 {
 public:
-  PressureBasedViscosityCoefficient(const std::string & name, InputParameters parameters);
+  PressureBasedViscosityCoefficient(const InputParameters & parameters);
   virtual ~PressureBasedViscosityCoefficient();
 
 protected:

@@ -22,8 +22,8 @@ InputParameters validParams<SaintVenantSetWaterHeightOutletBC>()
   return params;
 }
 
-SaintVenantSetWaterHeightOutletBC::SaintVenantSetWaterHeightOutletBC(const std::string & name, InputParameters parameters) :
-    IntegratedBC(name, parameters),
+SaintVenantSetWaterHeightOutletBC::SaintVenantSetWaterHeightOutletBC(const InputParameters & parameters) :
+    IntegratedBC(parameters),
     // Equation name
     _equ_type("continuity x_mom invalid", getParam<std::string>("equ_name")),
     // Coupled variables

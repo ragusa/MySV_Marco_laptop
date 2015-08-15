@@ -27,8 +27,7 @@ class PressureBasedViscosityMassMatrix : public TimeDerivative
 {
 public:
 
-  PressureBasedViscosityMassMatrix(const std::string & name,
-                        InputParameters parameters);
+  PressureBasedViscosityMassMatrix(const InputParameters & parameters);
 
 protected:
     virtual Real computeQpResidual();

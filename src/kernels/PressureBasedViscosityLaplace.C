@@ -26,9 +26,8 @@ InputParameters validParams<PressureBasedViscosityLaplace>()
   return params;
 }
 
-PressureBasedViscosityLaplace::PressureBasedViscosityLaplace(const std::string & name,
-                       InputParameters parameters) :
-  Kernel(name, parameters),
+PressureBasedViscosityLaplace::PressureBasedViscosityLaplace(const InputParameters & parameters) :
+  Kernel(parameters),
     _press_grad(coupledGradient("pressure"))
 {}
 

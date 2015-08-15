@@ -23,7 +23,7 @@ class HydrostaticPressure : public EquationOfState
 {
 public:
   // Constructor
-  HydrostaticPressure(const std::string & name, InputParameters parameters);
+  HydrostaticPressure(const InputParameters & parameters);
 
   // Destructor
   virtual ~HydrostaticPressure();

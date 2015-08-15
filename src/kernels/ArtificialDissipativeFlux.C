@@ -27,9 +27,8 @@ InputParameters validParams<ArtificialDissipativeFlux>()
   return params;
 }
 
-ArtificialDissipativeFlux::ArtificialDissipativeFlux(const std::string & name,
-                       InputParameters parameters) :
-  Kernel(name, parameters),
+ArtificialDissipativeFlux::ArtificialDissipativeFlux(const InputParameters & parameters) :
+  Kernel(parameters),
     // Equation name
     _equ_type("continuity x_mom y_mom invalid", getParam<std::string>("equ_name")),
     // Material

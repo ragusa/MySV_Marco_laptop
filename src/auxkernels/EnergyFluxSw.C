@@ -35,8 +35,8 @@ InputParameters validParams<EnergyFluxSw>()
   return params;
 }
 
-EnergyFluxSw::EnergyFluxSw(const std::string & name, InputParameters parameters) :
-    AuxKernel(name, parameters),
+EnergyFluxSw::EnergyFluxSw(const InputParameters & parameters) :
+    AuxKernel(parameters),
     // Momentum component
     _mom(coupledValue("momentum")),
     // Coupled variables

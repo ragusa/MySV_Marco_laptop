@@ -27,7 +27,7 @@ class PressureSw : public AuxKernel
 {
 public:
 
-  PressureSw(const std::string & name, InputParameters parameters);
+  PressureSw(const InputParameters & parameters);
 
 protected:
   virtual Real computeValue();

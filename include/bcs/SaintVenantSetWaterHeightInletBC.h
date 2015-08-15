@@ -17,7 +17,7 @@ InputParameters validParams<SaintVenantSetWaterHeightInletBC>();
 class SaintVenantSetWaterHeightInletBC : public IntegratedBC
 {
 public:
-  SaintVenantSetWaterHeightInletBC(const std::string & name, InputParameters parameters);
+  SaintVenantSetWaterHeightInletBC(const InputParameters & parameters);
   virtual ~SaintVenantSetWaterHeightInletBC(){}
 
 protected:

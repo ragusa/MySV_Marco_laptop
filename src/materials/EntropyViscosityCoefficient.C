@@ -25,8 +25,8 @@ InputParameters validParams<EntropyViscosityCoefficient>()
   return params;
 }
 
-EntropyViscosityCoefficient::EntropyViscosityCoefficient(const std::string & name, InputParameters parameters) :
-    Material(name, parameters),
+EntropyViscosityCoefficient::EntropyViscosityCoefficient(const InputParameters & parameters) :
+    Material(parameters),
     // Parameters
     _is_first_order(getParam<bool>("is_first_order")),
     _Ce(getParam<Real>("Ce")),
