@@ -9,7 +9,7 @@
   dim = 1
   xmin = -5.
   xmax = +5.
-  nx = 5000
+  nx = 1000
 []
 
 [Functions]
@@ -267,7 +267,7 @@
 [Outputs]
   output_initial = true
   exodus = true
-  interval = 100
+#  interval = 100
   print_linear_residuals = false
   print_perf_log = true
 []
